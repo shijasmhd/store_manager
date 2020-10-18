@@ -4,11 +4,11 @@ body{
     overflow: hidden;
 }
 .body1{
-    background-image: url('images/1.jpeg');
+    background-image: url('1.jpeg');
     background-size: cover;
 }
 .body2{
-    background-image: url('images/2.jpg');
+    background-image: url('2.jpg');
     background-size: cover;
 }
 .main, .billing{
