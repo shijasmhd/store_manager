@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="body1">
+        <div class="main container vw-100 vh-100 p-5" id="main">
+            <div class="heading container text-center display-4 h1 p-5">
+                Stock Update
+            </div>
+            <div class="card m-3">
+                <div class="card-header text-success h3 pb-3">ADD ITEM</div>
+                <form class="form m-4" id="form">
+                    <div class="form-group">
+                        <label for="itemId">Item ID</label>
+                        <input type="text" class="form-control" name="itemId" id="itemId" placeholder="Enter Item ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" class="form-control" name="itemName" id="itemName" placeholder="Enter Item Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Unit Price</label>
+                        <input type="text" class="form-control" name="itemPrice" id="itemPrice" placeholder="Enter Unit Price / Price per kg">
+                    </div>
+                </form>
+            </div>
+            <div class="addBtn text-center pt-5">
+                <button type="submit" form='form' id="addItem">ADD ITEM</button>
+            </div>
+            <div class="container billingLink text-center mt-4">
+                <a href="#billing">Go to billing -></a>
+            </div>
+            <div class="alert text-center mt-4" id="message"></div>
+        </div>
+    </div>
+    <div class="body2">
+        <div class="container billing vw-100 vh-100 p-5" id="billing">
+            <div class="container heading text-center display-4 h1 p-5">
+                Billing Section
+            </div>
+            <div class="container">
+                <form class="form row" id="form2">
+                    <div class="form-group col">
+                        <label for="billItem">Enter Item ID:</label>
+                        <input list="text" name="billItem" id="billItem" class="p-2">
+                        <datalist id="text"></datalist>
+                    </div>
+                    <div class="form-group col">
+                        <label for="billItemQty">Enter Quantity:</label>
+                        <input type="number" name="billItemQty" id="billItemQty" class="p-2">
+                    </div>
+                    <div class="form-group col">
+                        <button type="submit" id="billItemBtn" class="p-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <table class="container table mb-3">
+                <thead id="thead">
+                    <tr>
+                        <th scope="col">Sl No.</th>
+                        <th scope="col">Item ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>                       
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <th scope="row" colspan="5">TOTAL</th>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="addBtn text-center pt-5">
+                <button type="submit"onclick="window.print()">Print Bill</button>
+            </div>
+            <div class="container billingLink text-center my-4">
+                <a href="#main">Go to StockUpdate -></a>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
