@@ -1,0 +1,80 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0%;
+    scroll-behavior: smooth;
+}
+.body1{
+    background-image: url('images/1.jpeg');
+    background-size: cover;
+}
+.body2{
+    background-image: url('images/2.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.main, .billing{
+    background-color: #f4f4f4d3;
+}
+.heading{
+    color: #2BAE66FF;
+    font-weight: bold;
+}
+form{
+    color: #2BAE66FF;
+}
+.addBtn button{
+    background: transparent;
+    border: 1px solid rgba(43, 174, 102, 0.651);
+    padding: 1rem 2.7rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(43,174,102);
+}
+.addBtn button:hover{
+    background-color: rgba(43, 174, 102, 0.432);
+    color: #f4f4f4d3;
+    border: transparent;
+    transition: all 1.5s;
+}
+#billItemBtn{
+    background: transparent;
+    border: 1px solid rgba(43, 174, 102, 0.651);
+    font-weight: bold;
+    color: rgb(43,174,102);
+    margin-top: 1.7rem;
+    margin-bottom: 0%;
+}
+.billingLink a, #editData{
+    color: #2BAE66FF;
+    line-height: 2rem;
+    font-size: medium;
+}
+.table th{
+    color: #2BAE66FF;
+}
+#billItem, #billItemQty{
+    background-color: whitesmoke;
+    border: 1px solid rgba(43, 174, 102, 0.609);
+    margin-left: 2rem;
+}
+#editForm{
+    width: 30%;
+}
+#seperator{
+    padding: 50px;
+}
+@media (max-width : 500px){
+    *{
+        zoom: .93;
+    }
+}
+@media (max-width : 400px){
+    table{
+        zoom: .65;
+    }
+
+}
