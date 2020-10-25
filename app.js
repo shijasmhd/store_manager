@@ -14,6 +14,7 @@ class ui{
         setTimeout( () => {
             message.removeChild(message.firstChild);
             message.style.cssText = 'padding : 0 !important; border : none !important';
+            location.reload();
         }, 2000);
     }
     static addToTable(itemId, name, price, billItemQty){
@@ -77,7 +78,6 @@ class store{
             }
             ui.alert(nwitem.name);
             form.reset();
-            location.reload();
         }
         else{
             alert('Enter all values!');
@@ -149,7 +149,5 @@ function editItem(){
             continue;
         }
     }
-    let retreived1 = JSON.parse(localStorage.getItem('itemList'));
-    console.log(retreived1);
     editForm.reset();
 }
